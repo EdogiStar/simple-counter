@@ -1,13 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const h1 = document.getElementById("animatedText");
-  let hue = 0;
+let count = 0;
+var increaseBtn = document.getElementById("increaseBtn");
+var decreaseBtn = document.getElementById("decreaseBtn");
+var resetBtn = document.getElementById("resetBtn");
+let countEl = document.getElementById("countEl");
 
-  function animate() {
-    hue = (hue + 1) % 360;
-    h1.style.color = `hsl(${hue}, 100%, 50%)`;
-    requestAnimationFrame(animate);
-  }
+increaseBtn.addEventListener("click", function(){
+    increase();
+})
 
-  animate();
-});
+decreaseBtn.addEventListener("click", function(){
+    decrease();
+})
 
+resetBtn.addEventListener("click", function(){
+    reset();
+})
+
+function increase(){
+    count++;
+    countEl.textContent = count;
+}
+
+function decrease(){
+    if(count > 0){
+        count--;
+    }
+    countEl.textContent = count;
+}
+
+function reset(){
+    count = 0;
+    countEl.textContent = count;
+}

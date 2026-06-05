@@ -1,15 +1,45 @@
-html {
-  display: table;
-  height: 100%;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  background: aliceblue;
   text-align: center;
+  padding: 2rem;
+}
+
+button{
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 1rem;
   width: 100%;
 }
 
-body {
-  display: table-cell;
-  vertical-align: middle;
+.increaseBtn{
+  background: blue;
+  color: white;
+  font-weight: bold;
+  
 }
 
-h1 {
-  color: green;
+.decreaseBtn{
+  background: green;
+  color: white;
+  font-weight: bold;
+  
+}
+
+.resetBtn{
+  background: red;
+  color: white;
+  font-weight: bold;
+  
+}
+.countEl{
+  font-size: 8rem;
 }
